@@ -15,10 +15,10 @@
 /**
  * Adds a random quote to the page.
  */
-function addRandomQuote() {
   const quotes =
       ['Yeah Science!', 'SPS is lit', 'I am not throwing away my shot', 'I’m just a simple man trying to make my way in the universe'];
 
+function addRandomQuote() {
   // Pick a random quote.
   const quote = quote[Math.floor(Math.random() * quote.length)];
 
