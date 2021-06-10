@@ -1,9 +1,46 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 90%;
 }
 
-#greeting-container {
+#quote-container {
   margin-top: 20px;
+}
+
+a:link {
+  color: black;
+}
+
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  font: 4.5em Arial, Helvetica, sans-serif;
+}
+
+a {
+  font: 1.5em Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+  font: 1.0em Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.upper-info {
+  color: gray;
+}
+
+.header-image {
+  position: absolute;
+  top: 10px;
+  right: 50%;
+  width:15%; 
+}
+
+.bottom-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  width:95%;
 }
