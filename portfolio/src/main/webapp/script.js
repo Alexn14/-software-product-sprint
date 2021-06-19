@@ -27,3 +27,11 @@ function addRandomQuote() {
   quoteContainer.innerText = quote;
 }
 
+async function showHelloWorld() {
+  const responseFromServer = await fetch('/hello');
+  const textFromResponse = await responseFromServer.text();
+ 
+  const dateContainer = document.getElementById('hello-container');
+  dateContainer.innerText = textFromResponse;
+}
+
