@@ -35,3 +35,14 @@ async function showHelloWorld() {
   dateContainer.innerText = textFromResponse;
 }
 
+async function showBestShades() {
+  const responseFromServer = await fetch('/shades');
+  const shades = await responseFromServer.json();
+  
+  // Pick a random shade
+  const randomShade = shades[Math.floor(Math.random() * shades.length)];
+
+  // Add it to the page
+  const shadesContainer = document.getElementById('shades-container');
+  shadesContainer.innerText = randomShade;
+}
