@@ -11,11 +11,10 @@ import com.google.gson.Gson;
                                                        
 @WebServlet("/shades")
 public class BestShadesServlet extends HttpServlet {
-    String listOfShades[] = {"Turquoise Blue", "Celeste", "Navy", "Cyan", "Light Turquoise"};
-                            
+  private static final String[] LIST_OF_SHADES = {"Turquoise Blue", "Celeste", "Navy", "Cyan", "Light Turquoise"};                            
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String json = convertToJsonUsingGson(listOfShades);
+    String json = convertToJsonUsingGson(LIST_OF_SHADES);
     response.setContentType("application/json;");
     response.getWriter().println(json);
   }
