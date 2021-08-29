@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Alex Najera</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="spotify_AN_script.js"></script>
+  </head>
+  <body onload = "onPageLoad()">
+    <div id="content">
+      <h2>Music and such</h2> 
+      <img class="header-image" src="/images/musicIcon.jpg" />
+
+      <br> 
+      <form>
+        <label for="clientId">Client ID:</label>
+        <input type="text" id="clientId"><br><br>
+        <label for="clientSecret">Client Secret:</label>
+        <input type="text" id="clientSecret"><br><br>
+        <input class="btn btn-primary btn-lg" type="button" onclick="requestAuthorization()" value="Request Authorization"><br/>
+      </form>            
+      <h3> Check what I'm listening to at this moment!</h3>
+      <input type="button" class="btn btn-primary btn-sm mt-3" onclick="currentlyPlaying()" value="Refresh Currently Playing">
+      <div>
+          <img class="resize" img id="albumImage" src="">
+          <p class="song-info" id="trackTitle"></p>
+          <p class="song-by" id="trackArtist"></p>
+      </div>
+      <br>
+      <p> Hardcoded fetch Tick Tock by Joji</p>
+      <input type="button" class="btn btn-primary btn-sm mt-3" onclick="getSongFromSpotify()" value="Get hardcoded song">
+      <div>
+          <img class="resize" img id="fetchedAlbumImage" src="">
+          <p class="song-info" id="fetchedTrackTitle"></p>
+          <p class="song-by" id="fetchedTrackArtist"></p>
+          <br>          
+          <a id="fetchedLink">Open song in Spotify</a>
+      </div>
+      <br>
+      <p> Hardcoded song "reccomendation"</p>
+      <input type="button" class="btn btn-primary btn-sm mt-3" onclick="getReccomendation()" value="Get hardcoded reccomendation">
+      <div>
+          <img class="resize" img id="recAlbumImage" src="">
+          <p class="song-info" id="recTrackTitle"></p>
+          <p class="song-by" id="recTrackArtist"></p>
+          <br>          
+          <a id="recLink">Open song in Spotify</a>
+      </div>
+      <br>
+      <p><a href="/?authuser=3">Back home</a></p>
+      <br>
+    </div>
+  </body>
+</html>
